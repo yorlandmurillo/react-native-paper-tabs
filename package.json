@@ -1,5 +1,5 @@
 {
-  "name": "react-native-paper-tabs",
+  "name": "@yorlandmurillo/react-native-paper-tabs",
   "version": "0.10.5",
   "description": "Smooth and fast cross platform Material Design Tabs for React Native Paper",
   "main": "lib/commonjs/index",
@@ -41,7 +41,7 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/web-ridge/react-native-paper-tabs",
+  "repository": "https://github.com/yorlandmurillo/react-native-paper-tabs",
   "author": "Richard Lindhout <richardlindhout96@gmail.com> (https://github.com/RichardLindhout)",
   "license": "MIT",
   "bugs": {
