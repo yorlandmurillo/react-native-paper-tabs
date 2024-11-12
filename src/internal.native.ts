@@ -60,7 +60,7 @@ export function useIndicator({
 
     const getTranslateX = (i: number) => {
       const cl = layouts.current?.[i];
-      if (!cl) {
+      if (!cl || cl.width == 0) {
         return 0;
       }
       return (cl.x + cl.width / 2) / cl.width;
