@@ -17,6 +17,7 @@ function Tabs({
   showLeadingSpace = true,
   disableSwipe = false,
   tabHeaderStyle,
+  rtl = false,
   tabLabelStyle,
   ...rest
 }: {
@@ -29,6 +30,7 @@ function Tabs({
   showLeadingSpace?: boolean;
   uppercase?: boolean;
   mode?: Mode;
+  rtl: boolean;
   disableSwipe?: boolean;
   tabHeaderStyle?: ViewStyle | undefined;
   tabLabelStyle?: TextStyle | undefined;
@@ -40,6 +42,7 @@ function Tabs({
       style={style}
       dark={dark}
       theme={theme}
+      rtl={rtl}
       uppercase={uppercase}
       iconPosition={iconPosition}
       showTextLabel={showTextLabel}

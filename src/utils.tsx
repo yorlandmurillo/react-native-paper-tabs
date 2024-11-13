@@ -24,6 +24,7 @@ export interface SwiperRenderProps {
   showTextLabel?: boolean;
   showLeadingSpace?: boolean;
   uppercase: boolean;
+  rtl: boolean;
   mode: Mode;
   tabHeaderStyle: ViewStyle | undefined;
   tabLabelStyle: TextStyle | undefined;
@@ -39,6 +40,7 @@ export interface SwiperProps {
   showLeadingSpace?: boolean;
   uppercase: boolean;
   mode: Mode;
+  rtl: boolean;
   disableSwipe?: boolean;
   tabHeaderStyle: ViewStyle | undefined;
   tabLabelStyle: TextStyle | undefined;

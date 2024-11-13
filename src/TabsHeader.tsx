@@ -25,6 +25,7 @@ export default function TabsHeader({
   showLeadingSpace,
   uppercase,
   mode,
+  rtl,
   tabHeaderStyle,
   tabLabelStyle,
   children,
@@ -188,6 +189,7 @@ export default function TabsHeader({
           onScroll={(e) => {
             scrollX.current = e.nativeEvent.contentOffset.x;
           }}
+          style={{flexDirection: rtl ? "row-reverse" : "row"}}
           scrollEventThrottle={25}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
@@ -198,7 +200,26 @@ export default function TabsHeader({
             <View style={styles.scrollablePadding} />
           ) : null}
 
-          {React.Children.map(children, (tab, tabIndex) => (
+          {rtl ? React.Children.map(children.slice(0).reverse(), (tab, tabIndex) => (
+            <TabsHeaderItem
+              theme={theme}
+              tabIndex={tabIndex}
+              tab={tab as ReactElement<TabScreenProps>}
+              active={index === tabIndex}
+              onTabLayout={onTabLayout}
+              goTo={goTo}
+              activeColor={activeColor}
+              textColor={textColor}
+              position={position}
+              offset={offset}
+              childrenCount={children.length}
+              uppercase={uppercase}
+              iconPosition={iconPosition}
+              showTextLabel={showTextLabel}
+              mode={mode}
+              tabLabelStyle={tabLabelStyle}
+            />
+          )):React.Children.map(children, (tab, tabIndex) => (
             <TabsHeaderItem
               theme={theme}
               tabIndex={tabIndex}

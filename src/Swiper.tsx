@@ -15,6 +15,7 @@ function Swiper(props: SwiperProps) {
     showLeadingSpace,
     uppercase,
     mode,
+    rtl,
     tabHeaderStyle,
     tabLabelStyle,
   } = props;
@@ -32,6 +33,7 @@ function Swiper(props: SwiperProps) {
     theme,
     dark,
     style,
+    rtl,
     offset: undefined,
     position: undefined,
     iconPosition,
